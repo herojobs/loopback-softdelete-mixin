@@ -53,8 +53,8 @@ export default (Model, { deletedAt = 'deletedAt', _isDeleted = '_isDeleted', scr
   // Emulate default scope but with more flexibility.
   const queryNonDeleted = {
     or: [
-      { [_isDeleted]: { exists: false } },
-      { [_isDeleted]: false },
+      { _isDeleted: { exists: false } },
+      { _isDeleted: false },
     ],
   };
 
